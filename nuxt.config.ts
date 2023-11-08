@@ -4,7 +4,11 @@ export default defineNuxtConfig({
   ssr: false,
   modules: ["@vite-pwa/nuxt"], // https://vite-pwa-org.netlify.app/frameworks/nuxt
   pwa: {
-    /* your pwa options */
+    manifest: {}, // set to generate manifest.webmanifest
+    workbox: {
+      navigateFallback: "/",
+      globPatterns: ["**/*.{js,css,html,json,ico,png,svg}"], // <== json files included: when offline you will see missing json files request
+    },
   },
   generate: {
     routes: ["/"],

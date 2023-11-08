@@ -12,7 +12,7 @@ onMounted(() => {
 <template>
   <div>
     <VitePwaManifest />
-    <p>Hello world</p>
+    <p>Hello sun</p>
     <!-- You can use $pwa directly in templates! -->
     <div v-show="$pwa.needRefresh">
       <span>
